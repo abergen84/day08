@@ -53,7 +53,7 @@ function isVowel(char) {
 
     var vowels = "aeiou";
     var n = vowels.indexOf(char);
-    
+
     if (n >= 0) {
         console.log("True");
     } else {
@@ -116,7 +116,7 @@ function sum(Array) {
         total += Array[i];
     }
 
-return total;
+    return total;
 }
 
 
@@ -130,11 +130,11 @@ function multiply(Array) {
 
     var total = 1;
 
-    for(var i = 0; i < Array.length; ++i){
+    for (var i = 0; i < Array.length; ++i) {
         total *= Array[i];
     }
 
-return total;
+    return total;
 }
 
 
@@ -151,13 +151,14 @@ function reverse(str) {
 
     var sentence = "";
 
-    for(var i = str.length - 1; i >= 0; i--){
+    for (var i = str.length - 1; i >= 0; i--) {
         sentence += str[i];
     }
-        return sentence;
+    return sentence;
 }
 
 //This one works just as well
+
 //function reverse(str){
 //    return str.split("").reverse().join("");
 //}
@@ -169,17 +170,31 @@ function reverse(str) {
 
 function findLongestWord(words) {
     "use strict";
-    //...
+
+    words.sort(function(a, b) {
+        return a.length > b.length ? -1 : 1;
+    })
+
+    return words[0].length;
 }
+
 
 // ---------------------
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
-function filterLongWords(words, i) {
-    "use strict";
-    //...
-}
+//function filterLongWords(words, i) {
+ //   "use strict";
+ //   
+  //  words.sort(function(a, b){
+  //      return a.length > b.length ? 1 : -1;
+  //  })
+  //      words.length;
+
+ //       i > words.length ? return words : 0;
+
+
+//}
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
