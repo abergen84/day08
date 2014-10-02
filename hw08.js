@@ -12,12 +12,11 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
 // ---------------------
 
-function max(a,b){
+function max(a, b) {
     "use strict";
-    if(a > b){
+    if (a > b) {
         console.log(b + " is the smaller number");
-    }
-    else{
+    } else {
         console.log(b + " is the bigger number");
     }
 }
@@ -27,18 +26,18 @@ function max(a,b){
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // ---------------------
 
-function maxOfThree(a,b,c){
+function maxOfThree(a, b, c) {
     "use strict";
-    if(a > b){
-        if(a > c){
+    if (a > b) {
+        if (a > c) {
             console.log(a);
-        } else{
+        } else {
             console.log(c);
-        }    
-    } else if(a < b){
-        if(a < c){
+        }
+    } else if (a < b) {
+        if (a < c) {
             console.log(c);
-        } else{
+        } else {
             console.log(b);
         }
     }
@@ -49,14 +48,15 @@ function maxOfThree(a,b,c){
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
 
-function isVowel(char){
+function isVowel(char) {
     "use strict";
-    
-var vowels = ["a", "e", "i", "o", "u"];
-    if (var n = vowels.indexOf(char)){    
-    console.log("True");
-    } else{
-    console.log("False");
+
+    var vowels = "aeiou";
+    var n = vowels.indexOf(char)
+    if (n) {
+        console.log("True");
+    } else {
+        console.log("False");
     }
 
 }
@@ -69,49 +69,56 @@ var vowels = ["a", "e", "i", "o", "u"];
 //        console.log("False");
 //    }
 
- //   if(char "a"){
- //       }else if(char === "e"){
- //           }else if(char === "i"){
- //               console.log("true");        
- //           }
- //       else{
- //           console.log("false");
- //       }    
+//   if(char "a"){
+//       }else if(char === "e"){
+//           }else if(char === "i"){
+//               console.log("true");        
+//           }
+//       else{
+//           console.log("false");
+//       }    
 
 
 // ---------------------
 // Write a function translate() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-function rovarspraket(){
+function rovarspraket(phrase) {
     "use strict";
-    //...
+    var vowels = "aeiou ";
+    return phrase.split("").map(function(letter) {
+        return vowels.indexOf(letter) === -1 ? letter + "o" + letter : letter
+
+    }).join("");
 }
+//var resultArray = "";
+//for(var i = 0; i < phrase.length; i++({
+//    resultArray +=
+//      "aeiou".indexOf(phrase[i]) >= 0 ? phrase[i] : phrase[i]+
+
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(a,b,c,d){
+function sum(a, b, c, d) {
     "use strict";
- 
-var total = 0;
 
-    for (var i = 0, n = sum.length; i < n; ++i)
-    {
-    total += sum[i];
+    var total = 0;
+
+    for (var i = 0, n = sum.length; i < n; ++i) {
+        total += sum[i];
     }
 }
 
- //   return a + b + c + d;
+//   return a + b + c + d;
 
- //   console.log(sum);
+//   console.log(sum);
 
 
-function multiply(a,b,c,d){
+function multiply(a, b, c, d) {
     "use strict";
     return a * b * c * d;
-}
     console.log(multiply);
 }
 
@@ -119,14 +126,13 @@ function multiply(a,b,c,d){
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(str){
+function reverse(str) {
     "use strict";
     var i = str.length;
-    i=i-1;
-    var reversewords="";
-    for (var x = i; x >= 0; x--)
-    {
-        reversewords +=(str.charAt(x));   
+    i = i - 1;
+    var reversewords = "";
+    for (var x = i; x >= 0; x--) {
+        reversewords += (str.charAt(x));
     }
 }
 
@@ -136,7 +142,7 @@ reverse("string")
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
 // ---------------------
 
-function findLongestWord(words){
+function findLongestWord(words) {
     "use strict";
     //...
 }
@@ -145,7 +151,7 @@ function findLongestWord(words){
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
-function filterLongWords(words, i){
+function filterLongWords(words, i) {
     "use strict";
     //...
 }
@@ -154,7 +160,7 @@ function filterLongWords(words, i){
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
-function charFreq(string){
+function charFreq(string) {
     "use strict";
     //...
 }
@@ -176,6 +182,4 @@ function charFreq(string){
 //javascript utilizes semicolons and automatically inserts them if missing in a lot of cases
 //this is considered a huge flaw because it can change behavior of the code
 //in the case of a leading parenthesis, the parser will not insert a semicolon
-
-
-
+//
