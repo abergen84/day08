@@ -158,3 +158,24 @@ function charFreq(string){
     "use strict";
     //...
 }
+
+
+//15 things I learned..
+//Do not use ==, use ===
+//== coerces code, while === does not perform type coercion
+//the typeof/instanceof operator is JavaScript's biggest design flaw
+//to check the type of an object, use Object.prototype.toString
+//instanceof operator compares constructors of its two operands
+//instanceof should also be avoided at most costs
+//javascript is a weakly typed language so it will apply type coercion wherever possible
+//using !! twice, a value can be converted to a boolean
+//the use of Eval should also be avoided
+//eval can produce security issues beaue it executes any code given to it
+//two distinct values for nothing: null and undefined
+//undefined is more useful than null
+//javascript utilizes semicolons and automatically inserts them if missing in a lot of cases
+//this is considered a huge flaw because it can change behavior of the code
+//in the case of a leading parenthesis, the parser will not insert a semicolon
+
+
+
