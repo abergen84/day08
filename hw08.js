@@ -52,8 +52,9 @@ function isVowel(char) {
     "use strict";
 
     var vowels = "aeiou";
-    var n = vowels.indexOf(char)
-    if (n) {
+    var n = vowels.indexOf(char);
+    
+    if (n >= 0) {
         console.log("True");
     } else {
         console.log("False");
@@ -91,36 +92,55 @@ function rovarspraket(phrase) {
 
     }).join("");
 }
+
 //var resultArray = "";
 //for(var i = 0; i < phrase.length; i++({
 //    resultArray +=
-//      "aeiou".indexOf(phrase[i]) >= 0 ? phrase[i] : phrase[i]+
+//      "aeiou".indexOf(phrase[i]) >= 0 ? phrase[i] : phrase[i]+"o"+phrase[i];
+//    }
+//
+//    return resultArray;
+//}
 
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(a, b, c, d) {
+function sum(Array) {
     "use strict";
 
     var total = 0;
 
-    for (var i = 0, n = sum.length; i < n; ++i) {
-        total += sum[i];
+    for (var i = 0; i < Array.length; ++i) {
+        total += Array[i];
     }
+
+return total;
 }
+
 
 //   return a + b + c + d;
 
 //   console.log(sum);
 
 
-function multiply(a, b, c, d) {
+function multiply(Array) {
     "use strict";
-    return a * b * c * d;
-    console.log(multiply);
+
+    var total = 1;
+
+    for(var i = 0; i < Array.length; ++i){
+        total *= Array[i];
+    }
+
+return total;
 }
+
+
+//    return a * b * c * d;
+//    console.log(multiply);
+
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -128,15 +148,20 @@ function multiply(a, b, c, d) {
 
 function reverse(str) {
     "use strict";
-    var i = str.length;
-    i = i - 1;
-    var reversewords = "";
-    for (var x = i; x >= 0; x--) {
-        reversewords += (str.charAt(x));
+
+    var sentence = "";
+
+    for(var i = str.length - 1; i >= 0; i--){
+        sentence += str[i];
     }
+        return sentence;
 }
 
-reverse("string")
+//This one works just as well
+//function reverse(str){
+//    return str.split("").reverse().join("");
+//}
+
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
