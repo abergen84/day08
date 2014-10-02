@@ -51,8 +51,33 @@ function maxOfThree(a,b,c){
 
 function isVowel(char){
     "use strict";
-    //...
+    
+var vowels = ["a", "e", "i", "o", "u"];
+    if (var n = vowels.indexOf(char)){    
+    console.log("True");
+    } else{
+    console.log("False");
+    }
+
 }
+
+//    var vowels = ["a", "e", "i", "o", "u"];
+//
+//   if(char.contains(vowels)){
+//        console.log("True");
+//    } else{
+//        console.log("False");
+//    }
+
+ //   if(char "a"){
+ //       }else if(char === "e"){
+ //           }else if(char === "i"){
+ //               console.log("true");        
+ //           }
+ //       else{
+ //           console.log("false");
+ //       }    
+
 
 // ---------------------
 // Write a function translate() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
@@ -67,24 +92,45 @@ function rovarspraket(){
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
 // ---------------------
 
-function sum(){
+function sum(a,b,c,d){
     "use strict";
-    //...
+ 
+var total = 0;
+
+    for (var i = 0, n = sum.length; i < n; ++i)
+    {
+    total += sum[i];
+    }
 }
 
-function multiply(){
+ //   return a + b + c + d;
+
+ //   console.log(sum);
+
+
+function multiply(a,b,c,d){
     "use strict";
-    //...
+    return a * b * c * d;
+}
+    console.log(multiply);
 }
 
 // ---------------------
 // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
 // ---------------------
 
-function reverse(){
+function reverse(str){
     "use strict";
-    //...
+    var i = str.length;
+    i=i-1;
+    var reversewords="";
+    for (var x = i; x >= 0; x--)
+    {
+        reversewords +=(str.charAt(x));   
+    }
 }
+
+reverse("string")
 
 // ---------------------
 // Write a function findLongestWord() that takes an array of words and returns the length of the longest one.
