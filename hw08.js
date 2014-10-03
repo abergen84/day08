@@ -202,8 +202,38 @@ var longWords = []
 
 function charFreq(string) {
     "use strict";
-    //...
+    
+    var characters = {};
+
+    for (var i=0; i<string.length; i++){
+
+        characters[string[i]] = 
+            (characters[string[i]] === undefined) ?
+            1 : 
+            characters[string[i]]+1;
+    }
+    return characters;    
 }
+
+
+// the object characters is empty
+
+// we pass in a string called "hhllo"
+
+// let's set this object characters equal to 
+
+// Does the characters object have a property that is equal to the value of hello at index equal to 0 which is h?
+
+// There is no property h in our characters object so let's define it and set it equal to a value of 1
+
+// loop again with i equal to 1
+
+// Does the characters object have a property that is equal to the value of hello at index equal to 1 which is h?
+
+// Yes, this proprety is defined and has a value equal to 1, so set the value of the characters object whose property is the same
+// as the value of the string at index=1 (which is also h) and let's increment it by 1. So now this property (which is h) is equal
+// to 2.
+
 
 
 //15 things I learned..
