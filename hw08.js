@@ -62,22 +62,6 @@ function isVowel(char) {
 
 }
 
-//    var vowels = ["a", "e", "i", "o", "u"];
-//
-//   if(char.contains(vowels)){
-//        console.log("True");
-//    } else{
-//        console.log("False");
-//    }
-
-//   if(char "a"){
-//       }else if(char === "e"){
-//           }else if(char === "i"){
-//               console.log("true");        
-//           }
-//       else{
-//           console.log("false");
-//       }    
 
 
 // ---------------------
@@ -93,14 +77,6 @@ function rovarspraket(phrase) {
     }).join("");
 }
 
-//var resultArray = "";
-//for(var i = 0; i < phrase.length; i++({
-//    resultArray +=
-//      "aeiou".indexOf(phrase[i]) >= 0 ? phrase[i] : phrase[i]+"o"+phrase[i];
-//    }
-//
-//    return resultArray;
-//}
 
 
 // ---------------------
