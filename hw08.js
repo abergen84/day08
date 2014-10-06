@@ -147,10 +147,12 @@ function reverse(str) {
 function findLongestWord(words) {
     "use strict";
 
+    words = words.split(" ");
+    
     words.sort(function(a, b) {
         return a.length > b.length ? -1 : 1;
     })
-
+    
     return words[0].length;
 }
 
